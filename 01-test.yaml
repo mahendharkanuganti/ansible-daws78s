@@ -4,6 +4,6 @@
   tasks:
   - name: this is fist task
     ansible.builtin.dnf:
-      nginx: installed
+      name: nginx
       state: present
       service: started
