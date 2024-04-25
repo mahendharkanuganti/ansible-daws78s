@@ -6,4 +6,4 @@
     ansible.builtin.dnf:
       name: nginx
       state: present
-      service: started
+      
