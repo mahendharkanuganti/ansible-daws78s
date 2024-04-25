@@ -1,9 +1,13 @@
 - name: This is my first yaml playbook
   become: true
-  hosts: localhost
+  hosts: web
   tasks:
   - name: this is fist task
     ansible.builtin.dnf:
       name: nginx
       state: present
+    ansible.builtin.service:
+      name: nginx
+      state: started
+      enabled: yes
       
