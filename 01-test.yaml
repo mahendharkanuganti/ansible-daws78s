@@ -1,9 +1,9 @@
 - name: This is my first yaml playbook
   become: true
+  hosts: localhost
   tasks:
   - name: this is fist task
     dnf:
       nginx: installed
       state: present
       service: started
-      
