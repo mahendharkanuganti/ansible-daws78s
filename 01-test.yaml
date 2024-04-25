@@ -3,7 +3,7 @@
   hosts: localhost
   tasks:
   - name: this is fist task
-    dnf:
+    ansible.builtin.dnf:
       nginx: installed
       state: present
       service: started
