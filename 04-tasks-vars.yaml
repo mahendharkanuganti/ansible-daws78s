@@ -15,4 +15,4 @@
     
     - name: Not defining variable here under tasks
       ansible.builtin.debug:
-        msg: Hi this is {{name}} am from {{location}} and am doing {{course}} course.
+        msg: Hi am from {{location}} and am doing {{course}} course.
