@@ -1,6 +1,6 @@
 [web]
 172.31.94.204
 
-[localhosts: vars]
+[localhost:vars]
 course: devops-aws
 month: June
