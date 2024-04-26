@@ -5,4 +5,4 @@
   tasks:
   - name: calling a variable from a file
     ansible.builtin.debug:
-      msg: Hi I am doing {{course}}, it will complete in {{month}}
+      msg: Hi I am doing {{course}} , it will complete in {{month}}
