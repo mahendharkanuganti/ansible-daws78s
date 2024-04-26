@@ -1,6 +1,9 @@
 [web]
 172.31.94.204
 
+[localhost]
+localhost
+
 [localhost:vars]
-course= "devops-aws"
-month= "June"
+course: devops-aws
+month: June
