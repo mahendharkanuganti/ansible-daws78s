@@ -3,7 +3,7 @@
   vars:     # --> These are variables under play
     course: daws
     location: hyd
-    duration: 3 months
+    duration: "3 months"
   - tasks:
     - name: defining variables under tasks   # --> These are variables tasks
       vars:
