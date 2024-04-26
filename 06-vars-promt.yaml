@@ -1,0 +1,17 @@
+- name: Defining variables from prompt
+  hosts: localhost
+  vars_prompt:
+  - name: amount
+    prompt: Enter the amount:?
+    private: false
+  - name: location
+    prompt: what is your locaion?
+    private: false
+  - name: code
+    prompt: Enter your code?
+    private: true
+  tasks:
+  - name: getting variable names from prompt
+    ansible.builtin.debug:
+      msg: The amount is {{amount}} , localtion is {{location}} and the code {{code}} entered.
+      

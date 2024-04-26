@@ -12,5 +12,5 @@
 
 # To call variables from files, we can use below 2 ways
 
-# 1. The include_vars module (works in any list of tasks, such as a playbook or role)
+# 1. The include_vars module (works in any list of tasks, such as a playbook or role)  -- doesn't work under play's 
 # 2. The vars_files keyword (works on plays only)
