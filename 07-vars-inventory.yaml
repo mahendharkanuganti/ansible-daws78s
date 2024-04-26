@@ -1,0 +1,7 @@
+- name: Getting the variable values from inventory file
+  hosts: localhost
+  tasks:
+  - name: Here variables will be called from inventory
+    ansible.builtin.debug:
+      msg: Hi I am doing {{course}} and it will finish in {{month}}
+      

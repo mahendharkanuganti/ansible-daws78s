@@ -14,4 +14,16 @@
   - name: getting variable names from prompt
     ansible.builtin.debug:
       msg: The amount is {{amount}} , localtion is {{location}} and the code {{code}} entered.
-      
+
+
+
+# The output is below:
+
+# TASK [getting variable names from prompt] *************************************************************************************************************
+# ok: [localhost] => {
+#     "msg": "The amount is 10000 , localtion is hyd and the code 786 entered."
+
+
+# >> vars_prompt  --> is used to specify the variables can be passed via the prompt in the CLI
+# >> private: false --> The value entered by user will NOT be hidden in CLI
+# >> private: true --> The value entered by user will be hidden in CLI
