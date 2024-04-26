@@ -1,6 +1,6 @@
 - name: Defining variable in a file and calling them here using that file name
   hosts: localhost
-  include_vars:
+  vars_files:
   - variables.yaml
   tasks:
   - name: calling a variable from a file
