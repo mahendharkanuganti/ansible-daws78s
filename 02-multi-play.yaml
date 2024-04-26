@@ -1,0 +1,9 @@
+- name: This is to test number of plays
+  hosts: localhost
+  tasks:
+  - name: to test the play
+    ansible.builtin.debug:
+      msg: "task 1 play 1"
+  - name: to test play
+    ansible.builtin.debug: 
+      msg: task 1 play 2
