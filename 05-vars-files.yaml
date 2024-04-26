@@ -1,5 +1,6 @@
 - name: Defining variable in a file and calling them here using that file name
   hosts: localhost
+  become: true
   vars_files:
   - variables.yaml
   tasks:
