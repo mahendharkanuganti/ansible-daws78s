@@ -1,7 +1,7 @@
 - name: Defining variable in a file and calling them here using that file name
   hosts: localhost
   vars_files:
-  - variables
+  - variables.yaml
   tasks:
   - name: calling a variable from a file
     ansible.builtin.debug:
