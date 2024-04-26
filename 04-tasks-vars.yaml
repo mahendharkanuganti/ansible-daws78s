@@ -1,4 +1,4 @@
-- name: playbook to check which variable is prioritised vars in play or vars in tasks.
+- name: playbook to check which variable is prioritised? vars in play or vars in tasks.
   hosts: localhost
   vars:     # --> These are variables under play
     course: daws
