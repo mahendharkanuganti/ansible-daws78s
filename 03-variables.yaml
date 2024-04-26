@@ -8,3 +8,23 @@
   - name: To display variables information
     ansible.builtin.debug:
       msg: Hi This is {{name}} and may age is {{age}} , am from {{country}}
+
+
+# In shell script, we use $ symbol to call the variable like $NAME
+
+# In ansible, we use {{}} to call the variables. ex: {{variable_name}}
+
+# vars - is used to define the variables inside the playbook.
+
+# We can define a variable in 6 different ways in ansible.
+
+# 1. Define variable in playbook ex: vars
+# 2. Define variable as a command line argument
+# ex: ansible-playbook -i inventory.ini 01-variable.yaml -e name=mahendhar -e age=32
+# OR
+# ansible-playbook -i inventory.ini 01-variable.yaml -e "name=mahendhar age=32"
+
+# -e or --extra-vars ==> is used to define the command line argumenets.
+
+#ansible.builtin.debug:  --> This is the ansible builtin feature or module to display the text as a message
+
