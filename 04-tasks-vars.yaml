@@ -1,0 +1,18 @@
+- name: playbook to check which variable is prioritised vars in play or vars in tasks.
+  hosts: localhost
+  vars:     # --> These are variables under play
+    course: daws
+    location: hyd
+    duration: 3 months
+  - tasks:
+    - name: defining variables under tasks   # --> These are variables tasks
+      vars:
+        name: Mahendhar
+        age: 32
+        location: hyd
+      ansible.builtin.debug:
+        msg: Hi this is {{name}} am from {{location}} and am doing {{course}} course.
+    
+    - name: Not defining variable here under tasks
+      ansible.builtin.debug:
+        msg: Hi this is {{name}} am from {{location}} and am doing {{course}} course.
