@@ -1,10 +1,1 @@
 localhost
-
-[localhost]
-localhost
-
-[localhost:vars]
-Course="DevOps with AWS"
-Trainer="Sivakumar"
-Duration="120hrs"
-#WISHES="Morning from inventory"
