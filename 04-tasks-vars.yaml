@@ -4,7 +4,7 @@
     course: daws
     location: hyd
     duration: "3 months"
-  - tasks:
+  tasks:
     - name: defining variables under tasks   # --> These are variables tasks
       vars:
         name: Mahendhar
