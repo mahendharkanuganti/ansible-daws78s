@@ -1,8 +1,16 @@
 - name: Defining variable in a file and calling them here using that file name
   hosts: localhost
-  vars_files:
+  include_vars:
   - variables.yaml
   tasks:
   - name: calling a variable from a file
     ansible.builtin.debug:
       msg: Hi I am doing {{course}} , it will complete in {{month}}
+
+
+
+
+# To call variables from files, we can use below 2 ways
+
+# 1. The include_vars module (works in any list of tasks, such as a playbook or role)
+# 2. The vars_files keyword (works on plays only)
