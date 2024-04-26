@@ -7,12 +7,12 @@
   tasks:
     - name: defining variables under tasks   # --> These are variables tasks
       vars:
-        name: Mahendhar
+        course: devops-aws
         age: 32
         location: hyd
       ansible.builtin.debug:
-        msg: Hi this is {{name}} am from {{location}} and am doing {{course}} course.
+        msg: Hi am doing {{course}}
     
     - name: Not defining variable here under tasks
       ansible.builtin.debug:
-        msg: Hi am from {{location}} and am doing {{course}} course.
+        msg: Hi am doing {{course}}
