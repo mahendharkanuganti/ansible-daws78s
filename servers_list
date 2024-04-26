@@ -1,6 +1,9 @@
+
 [localhost]
 localhost
 
 [localhost:vars]
-course="devops-aws"
-month="June"
+Course="DevOps with AWS"
+Trainer="Sivakumar"
+Duration="120hrs"
+#WISHES="Morning from inventory"
