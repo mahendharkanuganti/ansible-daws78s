@@ -16,3 +16,18 @@
     - name: Not defining variable here under tasks
       ansible.builtin.debug:
         msg: Hi am doing {{course}}
+
+
+
+# Below is the output:
+
+# Here, Variables mentioned in tasks will be prioritised first then next, variables in play will be considered.
+
+# TASK [defining variables under tasks] *****************************************************************************************************************
+# ok: [localhost] => {
+#     "msg": "Hi am doing devops-aws"
+# }
+
+# TASK [Not defining variable here under tasks] *********************************************************************************************************
+# ok: [localhost] => {
+#     "msg": "Hi am doing daws"
