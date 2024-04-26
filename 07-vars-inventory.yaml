@@ -1,7 +1,8 @@
-- name: Getting the variable values from inventory file
+- name: variables from inventory
   hosts: localhost
   tasks:
-  - name: Here variables will be called from inventory
+  - name: print information
+    vars:
+      timings: "07:15AM IST"
     ansible.builtin.debug:
-      msg: Hi I am doing {{course}} and it will finish in {{month}}
-      
+      msg: "Hi, We are learning {{Course}} from Trainer {{Trainer}}, Duration is {{Duration}}. Timings are: {{timings}}"
