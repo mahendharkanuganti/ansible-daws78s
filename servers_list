@@ -5,5 +5,5 @@
 localhost
 
 [localhost:vars]
-course: devops-aws
-month: June
+course="devops-aws"
+month="June"
