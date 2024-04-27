@@ -1,5 +1,5 @@
 - name: This is the example playbook for defining variable inside the playbook
-  hosts: localhost
+  hosts: web
   vars:
     name: Mahendhar
     age: 32
