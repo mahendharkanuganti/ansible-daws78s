@@ -18,3 +18,11 @@
   - name: Testing if playbook is proceeding further or not  
     ansible.builtin.debug:
       msg: Hello
+
+
+# when: USER.rc != 0   --> if user is  NOT exists it will "'rc': 1," in the playbook output. if user exists it will return "rc: 0"
+# >> so we are using above condition to add user if USER != 0 
+
+# ignore_errors: true  --> it will display the error in the command output, but still proceed further to execute the next instructions.
+
+# ansible.builtin.command:  -->> is used when you want to give commands
