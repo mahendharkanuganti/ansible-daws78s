@@ -1,0 +1,6 @@
+- name: Variable from args
+  hosts: localhost
+  tasks:
+  - name: giving variables from args
+    ansible.builtin.debug:
+      msg: Hello this {{course}} is passsed from with {{percentage}}
