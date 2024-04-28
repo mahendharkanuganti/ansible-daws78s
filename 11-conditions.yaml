@@ -10,3 +10,11 @@
   - name: print user information
     ansible.builtin.debug:
       msg: "user info: {{USER}}"
+
+  - name: add user if not exists
+    ansible.builtin.command: useradd test
+    when: USER.rc != 0  #this is condition
+
+  - name: Testing if playbook is proceeding further or not  
+    ansible.builtin.debug:
+      msg: Hello
