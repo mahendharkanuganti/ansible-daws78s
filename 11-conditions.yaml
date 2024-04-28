@@ -10,8 +10,3 @@
   - name: print user information
     ansible.builtin.debug:
       msg: "user is: {{USER}}"
-  
-  - name: Add user if not exist
-    ansible.builtin.command: useradd test
-    when: USER.
-  
