@@ -4,3 +4,17 @@
   - name: print information
     ansible.builtin.debug:
       msg: "Hi, We are learning {{Course}} from Trainer {{Trainer}}, Timings are: {{Timings}}"
+
+
+
+# Below is the inventory file looks like when you give variables in inventory file.
+
+# 172.31.22.248
+
+# [localhost]
+# localhost
+
+# [localhost:vars]
+# Course=Devops-aws
+# Trainer=siva
+# Timings="07-09 pm"
