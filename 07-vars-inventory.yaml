@@ -1,5 +1,6 @@
 - name: variables from inventory
   hosts: localhost
+  become: yes
   tasks:
   - name: print information
     ansible.builtin.debug:
