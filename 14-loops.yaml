@@ -4,7 +4,7 @@
   - name: loop
     ansible.builtin.debug:
       msg: "{{ item }}"
-    loops:
-    - mahi
-    - mani
-    - hero
+  loops:
+   - mahi
+   - mani
+   - hero
