@@ -17,10 +17,9 @@
   tasks:
   - name: install rpms
     ansible.builtin.dnf:
-      msg:
-        name: "{{ item }}"
-        state: present
-      loop:
+      name: "{{ item }}"
+      state: present
+    loop:
       - ansible
       - mysql
       - nginx
