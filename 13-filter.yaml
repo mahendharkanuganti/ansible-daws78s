@@ -39,3 +39,14 @@
   - name: remove duplicates
     ansible.builtin.debug:
       msg: "{{ numbers | unique }}"
+
+# OR
+
+- name: remove duplicate numbers
+  hosts: localhost
+  vars: 
+    numbers: [mahi, mahi, man, man, hero, villan]
+  tasks:
+  - name: remove duplicates
+    ansible.builtin.debug:
+      msg: "{{ numbers | unique }}"
