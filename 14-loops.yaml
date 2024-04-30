@@ -16,7 +16,7 @@
   hosts: localhost
   tasks:
   - name: install rpms
-    ansible.builtin.debug:
+    ansible.builtin.dnf:
       msg:
         name: "{{ item }}"
         state: present
