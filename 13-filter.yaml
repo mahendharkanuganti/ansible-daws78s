@@ -42,7 +42,7 @@
 
 # OR
 
-- name: remove duplicate numbers
+- name: remove duplicates 
   hosts: localhost
   vars: 
     numbers: [mahi, mahi, man, man, hero, villan]
@@ -50,3 +50,14 @@
   - name: remove duplicates
     ansible.builtin.debug:
       msg: "{{ numbers | unique }}"
+
+# msg: "{{ numbers | unique }}"  --> unique is used to remove the duplicate from the array of list.
+
+- name: remove duplicates 
+  hosts: localhost
+  vars: 
+    rank: [1,2,3,4,5,6,7]
+  tasks:
+  - name: remove duplicates
+    ansible.builtin.debug:
+      msg: "{{ rank | min }}"
