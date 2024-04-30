@@ -1,6 +1,6 @@
 - name: "Check Number and convert text into interger (number)"
   hosts: localhost
-  var_promt:
+  vars_promt:
   - name: number
     prompt: Please enter the number
     private: no
