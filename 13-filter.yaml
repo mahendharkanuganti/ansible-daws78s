@@ -66,3 +66,19 @@
     ansible.builtin.debug:
       msg: "{{ rank | max }}"
 
+
+# >  msg: "{{ rank | max }}"  --> min and max parameters are used to print the least and large numbers in the list.
+
+
+- name: convert dictonary into list/items
+  hosts: localhost
+  vars:
+    my_dict:
+      course: Devops-aws
+      deration: 3months
+      place: hyd
+  tasks:
+  - name: converting dictionary into list
+    ansible.builtin.debug:
+      msg: "This is my dictonary {{ my_dict }}"
+
