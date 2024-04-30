@@ -14,3 +14,9 @@
     ansible.builtin.debug:
       msg: "Given number {{ number }} is greater than or equal to 10"
     when: number | int >= 10
+
+
+
+#  when: number | int < 10   --> it will convert the text into integer (number).
+#  > when we enter number as 10 in the prompt, it will actually considered as string/text, so we will get an error.
+#  > To convert that string/text to integer/number, we use "| int"
