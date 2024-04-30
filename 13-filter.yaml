@@ -89,3 +89,6 @@
   - name: After converting into list
     ansible.builtin.debug:
       msg: "this is list {{ my_dict | dict2items }}"
+
+# > dict2items, items2dict --> these parameters are used to convert dictionaries into list and list into dictionaries.
+
