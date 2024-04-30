@@ -19,11 +19,23 @@
 
 # >  msg: "{{ greetings | upper }}"  --> this will convert the lower case to upper case letters.
 
-- name: Convert lower case to upper case letters
+- name: Convert upper case to lower case letters
   hosts: localhost
   vars:
     greetings: "Hello This is MAHI"
   tasks:
-  - name: lower case to upper case
+  - name: upper case to lower case
     ansible.builtin.debug:
       msg: "{{ greetings | lower }}"
+
+# >  msg: "{{ greetings | upper }}"  --> this will convert the lower case to upper case letters.
+
+
+- name: remove duplicate numbers
+  hosts: localhost
+  vars: 
+    numbers: [1,3,4,5,6,6,1,4]
+  tasks:
+  - name: remove duplicates
+    ansible.builtin.debug:
+      msg: "{{ numers | unique }}"
