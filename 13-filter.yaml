@@ -4,3 +4,15 @@
   - name: print the default value
     ansible.builtin.debug:
       msg: "Hello the course is {{ course | default('Ansible') }}"
+
+# > when do not give any variable values anywhere, and if we forgot to give variables, we can use default one.
+# > {{ course | default('Ansible') }}"  --> here by default the course value will be taken as Ansible, even if you do not mention anywhere.
+
+- name: Convert lower case to upper case letters
+  hosts: localhost
+  vars:
+    greetings: "Hello this is mahi"
+  tasks:
+  - name: lower case to upper case
+    ansible.builtin.debug:
+      msg: "{{ greetings }}"
