@@ -1,0 +1,11 @@
+- name: "Check Number and convert text into interger (number)"
+  hosts: localhost
+  var_promt:
+  - name: number
+    prompt: Please enter the number
+    private: no
+  tasks:
+  - name: number is less than 10
+    ansible.builtin.debug:
+      msg: " Given number {{ number }} is less than 10"
+    when: number | int < 10
