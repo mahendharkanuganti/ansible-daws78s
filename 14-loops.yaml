@@ -8,3 +8,19 @@
     - mahi
     - mani
     - hero
+
+
+# > The value for the item parameter is called from the loop (mahi mani here).
+
+- name: Install packages from loops
+  hosts: localhost
+  tasks:
+  - name: install rpms
+    ansible.builtin.debug:
+      msg:
+        name: "{{ item }}"
+        state: present
+      loop:
+      - ansible
+      - mysql
+      - nginx
