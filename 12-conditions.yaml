@@ -1,4 +1,4 @@
-- name: "Check Number and convert text into interger (number)"
+- name: Check Number and convert text into number 
   hosts: localhost
   vars_promt:
   - name: number
