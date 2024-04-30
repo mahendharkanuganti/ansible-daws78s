@@ -82,3 +82,10 @@
     ansible.builtin.debug:
       msg: "This is my dictonary {{ my_dict }}"
 
+  - name: Before converting to list
+    ansible.builtin.debug:
+      msg: "This dictonary {{ my_dict }}"
+  
+  - name: After converting into list
+    ansible.builtin.debug:
+      msg: "this is list {{ my_dict | dict2items }}"
