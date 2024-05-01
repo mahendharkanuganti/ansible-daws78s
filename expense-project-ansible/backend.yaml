@@ -1,0 +1,25 @@
+- name: backend server installation and configuration
+  hosts: localhost
+  become: yes
+  vars:
+
+  tasks:
+  - name: disable nodejs
+    command: dnf module disable nodejs -y
+
+  - name: enable nodejs
+    command: dnf module enable nodejs:20 -y
+
+  - name: install nodejs
+    dnf:
+      name: nodejs
+      state: installed
+  
+  - name: add expense user
+    user:
+      name: expense
+  
+  - name: create /app directory
+    file:
+      path: /app
+      state: directory
