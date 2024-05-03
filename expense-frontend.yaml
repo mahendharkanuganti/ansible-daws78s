@@ -1,0 +1,37 @@
+- name: configure frontend server
+  hosts: frontend
+  become: yes
+  vars:
+
+  tasks:
+  - name: install nginx 
+    dnf:
+      name: nginx
+      state: installed
+  
+  - name: Enable and start nginx
+    service:
+      name: nginx
+      state: started
+      enabled: yes
+  
+  - name: delete default website
+    file:
+      path: /usr/share/nginx/html/
+      state: absent
+  
+  - name: download and extract the front-end application code
+    unarchive:
+      src: https://expense-builds.s3.us-east-1.amazonaws.com/expense-frontend-v2.zip
+      dest: /usr/share/nginx/html
+      remote_src: yes
+
+  - name: copy backend configuration file
+    copy:
+      src: expense.conf
+      dest: /etc/nginx/default.d/expense.conf
+
+  - name: restart the nginx service
+    service:
+      name: nginx
+      state: restarted
