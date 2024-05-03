@@ -1,8 +1,6 @@
 - name: configure frontend server
   hosts: frontend
   become: yes
-  vars:
-
   tasks:
   - name: install nginx 
     dnf:
@@ -19,6 +17,11 @@
     file:
       path: /usr/share/nginx/html/
       state: absent
+
+  - name: create html directory
+    file:
+      path: /usr/share/nginx/html/
+      state: directory
   
   - name: download and extract the front-end application code
     unarchive:
