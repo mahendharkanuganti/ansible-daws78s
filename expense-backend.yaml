@@ -31,10 +31,10 @@
       dest: /tmp/backend.zip
 
   - name: extract the code
-      unarchive:
-        src: /tmp/backend.zip
-        dest: /app
-        remote_src: yes
+    unarchive:
+       src: /tmp/backend.zip
+       dest: /app
+       remote_src: yes
 
   - name: Install nodejs dependencies
     command: npm install
