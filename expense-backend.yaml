@@ -48,9 +48,10 @@
 
   - name: install python and mysql dependencies
     ansible.builtin.pip:
-    - PyMySQL
-    - cryptography
-    executable: pip3.9
+      name:
+      - PyMySQL
+      - cryptography
+      executable: pip3.9
 
   - name: import data/schema into mysql
     community.mysql.mysql_db:
