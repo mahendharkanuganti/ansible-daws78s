@@ -2,7 +2,7 @@
   hosts: db
   become: yes
   vars:
-    login_host: 172.31.20.112
+    login_host: db.mahidevops.cloud
   vars_prompt:
   - name: mysql_root_password
     prompt: please enter mysql root password
