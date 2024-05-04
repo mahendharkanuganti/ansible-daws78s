@@ -46,6 +46,11 @@
       src: backend.service
       dest: /etc/systemd/system/backend.service
 
+  - name: install mysql cliet on backend server
+    dnf:
+      name: mysql
+      state: installed
+
   - name: install python and mysql dependencies
     ansible.builtin.pip:
       name:
@@ -61,11 +66,6 @@
       login_password: "{{ login_password }}"
       login_host: "{{ login_host }}"
       target: /app/schema/backend.sql
-
-  - name: install mysql cliet on backend server
-    dnf:
-      name: mysql
-      state: installed
 
   - name: reload service daemon
     ansible.builtin.systemd_service:
