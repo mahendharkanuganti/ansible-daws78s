@@ -12,7 +12,6 @@
     - mysql
 
 
-
 - name: install and absent rpms
   hosts: localhost
   become: yes
