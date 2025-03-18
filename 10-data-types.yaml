@@ -1,17 +1,17 @@
 - name: data types
   hosts: localhost
   vars:
-    course: DevOps with AWS
-    tools:
+    course: DevOps with AWS   # this is string
+    tools:     #this is list 
       - shell
       - Linux
       - AWS
-    experience:
+    experience:  #this is map/dictonary
       AWS: 2
-      devops: 3
+      devops: 3   #number
       shell: 2
       k8s: 2
-    realproject: true
+    realproject: true  #boolean
   tasks:
   - name: print the defined variables
     ansible.builtin.debug:
