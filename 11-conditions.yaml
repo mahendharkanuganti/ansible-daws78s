@@ -25,4 +25,4 @@
 
 # ignore_errors: true  --> it will display the error in the command output, but still proceed further to execute the next instructions.
 
-# ansible.builtin.command:  -->> is used when you want to give commands
+# ansible.builtin.command:  -->> is used when you want to give commands, when there are no modules for your need.
