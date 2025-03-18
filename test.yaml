@@ -1,0 +1,12 @@
+- name: install packages from loops
+  hosts: localhost
+  become: yes
+  tasks:
+  - name: install rpms
+    ansible.builtin.dnf:
+      name: "{{ item }}"
+      state: present
+    loop:
+    - nginx
+    - ansible
+    - mysql
