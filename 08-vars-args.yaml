@@ -4,3 +4,8 @@
   - name: giving variables from args
     ansible.builtin.debug:
       msg: Hello this {{course}} is passsed from with {{percentage}}
+
+
+
+# so the command will look like below
+#anisible-playbook -i inventory.ini -e ansible_user=ec2-user -e ansible_password=DevOps321 08-vars-args.yaml -e "course=DevOps percentage=88"
