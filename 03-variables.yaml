@@ -12,7 +12,7 @@
 
 # In shell script, we use $ symbol to call the variable like $NAME
 
-# In ansible, we use {{}} to call the variables. ex: {{variable_name}}
+# In ansible, we use {{ }} to call the variables. ex: {{variable_name}}
 
 # vars - is used to define the variables inside the playbook.
 
