@@ -3,6 +3,8 @@
   become: yes
   tasks:
   - name: print information
+    vars:
+      Timings: "07:15 AM IST"
     ansible.builtin.debug:
       msg: "Hi, We are learning {{Course}} from Trainer {{Trainer}}, Timings are: {{Timings}}"
 
